@@ -1,0 +1,99 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap");
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+body {
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 1rem 1rem;
+  font-family: "Ubuntu", sans-serif;
+  background-color: #fffef2;
+}
+
+h1 {
+  letter-spacing: 0.1em;
+  color: #6667ab;
+}
+nav {
+  font-size: 1.3em;
+}
+
+ul:last-child {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  display: flex;
+  justify-content: flex-end;
+  text-align: center;
+  margin-top: -60px;
+  margin-right: 2em;
+}
+
+figure {
+  height: 50px;
+  width: 50px;
+}
+
+ul > li {
+  padding: 15px;
+}
+
+ul > li:hover {
+  color: #f8bbcd;
+}
+
+.banner {
+  width: 600px;
+  height: 300px;
+  position: absolute;
+  top: 150px;
+  left: 150px;
+  overflow-x: hidden;
+  line-height: 10px;
+}
+
+.banner::-webkit-scrollbar {
+  display: none;
+}
+ol > li {
+  line-height: 25px;
+}
+
+.btn {
+  text-transform: uppercase;
+  background: #f8bbcd;
+  color: #a297e5;
+  padding: 0.5rem 1.5rem;
+  letter-spacing: var(--spacing);
+  display: inline-block;
+  font-weight: 700;
+  transition: var(--transition);
+  font-size: 1.25rem;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+  position: fixed;
+  top: 500px;
+  right: 550px;
+}
+.btn:hover {
+  color: #f8bbcd;
+  background: #a297e5;
+}
+
+.pic {
+  position: absolute;
+  top: 200px;
+  right: 150px;
+  width: 240px;
+  height: 250px;
+}
+

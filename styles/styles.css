@@ -1,2 +1,175 @@
 /* ===== YOUR CSS GOES HERE ===== */
 /* ===== START WITH GLOBAL STYLES THEN USE MEDIA QUERIES FOR LAYOUT ADJUSTMENTS ===== */
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap");
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+body {
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 1rem 1rem;
+  font-family: "Ubuntu", sans-serif;
+}
+
+h1 {
+  letter-spacing: 0.1em;
+  color: #6667ab;
+}
+nav {
+  font-size: 1.3em;
+}
+
+ul:last-child {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  display: flex;
+  justify-content: flex-end;
+  text-align: center;
+  margin-top: -60px;
+  margin-right: 2em;
+}
+
+figure {
+  height: 50px;
+  width: 50px;
+}
+
+ul > li {
+  padding: 15px;
+}
+
+ul > li:hover {
+  color: #f8bbcd;
+}
+
+h2 {
+  text-align: center;
+  margin-top: 60px;
+  font-size: 200%;
+  color: #f8bbcd;
+  letter-spacing: 0.05em;
+}
+
+.fridge > figure {
+  display: block;
+  margin-left: -60px;
+  margin-right: auto;
+  width: 50%;
+  z-index: -1;
+}
+
+.ingredient {
+  display: grid;
+  margin-top: 95px;
+  margin-left: 200px;
+  max-width: 780px;
+  grid-template-columns: 11em 11em 11em;
+  grid-auto-rows: 150px;
+  grid-gap: 0px;
+  padding-bottom: 30px;
+  justify-content: center;
+}
+
+input[type="checkbox"][id^="myCheckbox"] {
+  display: none;
+}
+
+label {
+  padding: 10px;
+  display: block;
+  position: relative;
+  margin: 5px;
+  cursor: pointer;
+}
+
+label:before {
+  background-color: white;
+  color: white;
+  content: " ";
+  display: block;
+  border-radius: 50%;
+  border: 1px solid grey;
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  width: 25px;
+  height: 25px;
+  text-align: center;
+  line-height: 28px;
+  transition-duration: 0.4s;
+  transform: scale(0);
+}
+
+label img {
+  height: 105px;
+  width: 105px;
+  transition-duration: 0.2s;
+  transform-origin: 50% 50%;
+}
+
+:checked + label {
+  border-color: #ddd;
+}
+
+:checked + label:before {
+  content: "✓";
+  background-color: green;
+  transform: scale(1);
+}
+
+:checked + label img {
+  transform: scale(0.9);
+  z-index: -1;
+}
+
+.column {
+  flex: 25%;
+  max-width: 25%;
+  padding: 0 4px;
+}
+
+button {
+  appearance: none;
+  background-color: #f8bbcd;
+  border: none;
+  border-radius: 3em;
+  color: #6667ab;
+  cursor: pointer;
+  margin-top: 850px;
+  margin-left: -130px;
+  font-size: 1.1rem;
+  line-height: 1;
+  padding: 1.2em 2.8em;
+  text-decoration: none;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+button:hover {
+  border: 3px solid pink;
+  background-color: white;
+}
+
+footer > ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin-top: 970px;
+  margin-left: -580px;
+}
+
+footer > ul > li {
+  padding: 30px;
+  display: inline-block;
+}
