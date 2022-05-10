@@ -33,15 +33,140 @@ $(function () {
     });
   });
 
+  $(function(){
+    $('#submitbtn').click(function(){
+      var modal = $("#detail_modal");
+      var page = 0;
+      
+      $(":checkbox").each(function () {
+        
+        if ($(this)[0].checked) {
+          page = page + Number($(this).val());
+        }
+      });
+      if (page == 201) {
+        window.location.href = "veggiecheese.html";
+      }else if (page == 53) {
+        window.location.href = "frenchtoast.html";
+      }else if (page == 102) {
+        window.location.href = "omeletteinamug.html";
+      }else if (page == 13) {
+        window.location.href = "bananabreadpudding.html";
+      }else if (page == 131) {
+        window.location.href = "instantnoodles.html";
+      }else if (page == 1001) {
+        window.location.href = "pizzaegg.html";
+      }else if (page == 73) {
+        window.location.href = "meatballsandwich.html";
+      }else if (page == 1018) {
+        window.location.href = "eggtoastpizza.html";
+      }else if (page == 1101) {
+        window.location.href = "pizzacroutons.html";
+      }else if (page == 1003) {
+        window.location.href = "pizzabreadpudding.html";
+      }else if (page == 1070) {
+        window.location.href = "pizzameatballs.html";
+      }else if (page == 19) {
+        window.location.href = "ramenmilk.html";
+      }else if (page == 4) {
+        window.location.href = "breadpizza.html";
+      }else if (page == 33) {
+        window.location.href = "ramenbread.html";
+      }else if (page == 3) {
+        window.location.href = "pizzacroutons.html";
+      }else if (page == 100) {
+        window.location.href = "noodlemeatball.html";
+      }else if (page == 101) {
+        window.location.href = "scrambledegg.html";
+      }else if (page == 131) {
+        window.location.href = "veggieramen.html";
+      }else if (page == 40) {
+       modal.modal();
+      }else if (page == 120) {
+        modal.modal();
+       }else if (page == 151) {
+        modal.modal();
+       }else if (page == 71) {
+        modal.modal();
+       }else if (page == 80) {
+        modal.modal();
+       }else if (page == 110) {
+        modal.modal();
+       }else if (page == 111) {
+        modal.modal();
+       }else if (page == 31) {
+        modal.modal();
+       }else if (page == 131) {
+        modal.modal();
+       }else if (page == 13) {
+        modal.modal();
+       }else if (page == 170) {
+        modal.modal();
+       }else if (page == 1010) {
+        modal.modal();
+       }else if (page == 1030) {
+        modal.modal();
+       }else if (page == 1050) {
+        modal.modal();
+       }
+    });
+});
 
-  const selections = [];
-  ['egg', 'veggie'];
 
-  localStorage.setItem('firstIngredient', selections[0]);
-  localStorage.setItem('secondIngredient', selections[1] );
-  window.location.href = './recipes.html';
 
-  
-  // get to new page
-  const firstIngredient = localStorage.getItem('firstIngredient');
-  
+/*
+  $("#submitbtn").click(function () {
+    page = 0;
+    $(":checkbox").each(function () {
+      if ($(this).attr("checked") == true) {
+        page = page + Number($(this).val());
+      }
+    });
+    var modal = $("#detail_modal");
+
+    if (page == 201) {
+      window.location.href = "veggiecheese.html";
+    }else if (page == 53) {
+      window.location.href = "frenchtoast.html";
+    }else if (page == 102) {
+      window.location.href = "omeletteinamug.html";
+    }else if (page == 13) {
+      window.location.href = "bananabreadpudding.html";
+    }else if (page == 131) {
+      window.location.href = "instantnoodles.html";
+    }else if (page == 1001) {
+      window.location.href = "pizzaegg.html";
+    }else if (page == 73) {
+      window.location.href = "meatballsandwich.html";
+    }else if (page == 1018) {
+      window.location.href = "eggtoastpizza.html";
+    }else if (page == 1101) {
+      window.location.href = "pizzacroutons.html";
+    }else if (page == 1003) {
+      window.location.href = "pizzabreadpudding.html";
+    }else if (page == 1070) {
+      window.location.href = "pizzameatballs.html";
+    }else if (page == 19) {
+      window.location.href = "ramenmilk.html";
+    }else if (page == 4) {
+      window.location.href = "breadpizza.html";
+    }else if (page == 33) {
+      window.location.href = "ramenbread.html";
+    }else if (page == 3) {
+      window.location.href = "pizzacroutons.html";
+    }else if (page == 100) {
+      window.location.href = "noodlemeatball.html";
+    }else if (page == 101) {
+      window.location.href = "scrambledegg.html";
+    }else if (page == 131) {
+      window.location.href = "veggieramen.html";
+    }else if (page == 40) {
+      //alert("ssss");
+     modal.modal();
+    }
+
+    
+  });
+*/
+
+

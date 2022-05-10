@@ -1,6 +1,6 @@
 /* ===== YOUR CSS GOES HERE ===== */
 /* ===== START WITH GLOBAL STYLES THEN USE MEDIA QUERIES FOR LAYOUT ADJUSTMENTS ===== */
-@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fredoka+One&family=Londrina+Shadow&family=Londrina+Solid:wght@900&family=Ubuntu:wght@500&display=swap");
 
 html {
   box-sizing: border-box;
@@ -15,18 +15,90 @@ body {
   max-width: 1000px;
   margin-left: auto;
   margin-right: auto;
-  padding: 1rem 1rem;
-  font-family: "Ubuntu", sans-serif;
+  padding: 0.5rem 0rem;
+  font-family: "Fredoka One", cursive;
+  letter-spacing: 0.1em;
 }
 
 h1 {
+  font-size: 45px;
   letter-spacing: 0.1em;
   color: #6667ab;
+  margin: 0;
 }
+
+h1 a {
+  text-decoration: none;
+  color: #6667ab;
+}
+
+.container {
+  text-align: center;
+  width: 95%;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.container-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header {
+  background-color: transparent;
+  padding: 0.8em 0;
+  box-shadow: 2px 2px 10px #f1f6f9;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+}
+
 nav {
   font-size: 1.3em;
 }
 
+nav a {
+  text-decoration: none;
+}
+
+@media (max-width: 796px) {
+  .container {
+    text-align: center;
+  }
+
+  .container-nav {
+    flex-direction: column;
+  }
+
+  nav ul {
+    flex-direction: column;
+  }
+
+  nav li {
+    margin: 0.8em 0;
+  }
+}
+
+.footer-container{
+  margin-top: 25px;
+  text-align: center;
+  list-style: none;
+  padding: 0;
+  padding: 15px;
+  color: #f8bbcd;
+  text-decoration: none;
+}
+.footer-a {
+  color: #6667ab;
+  text-decoration: none;
+}
+.footer-a:hover {
+  color: #f8bbcd;
+}
 ul:last-child {
   list-style: none;
   padding: 0;
@@ -34,13 +106,6 @@ ul:last-child {
   display: flex;
   justify-content: flex-end;
   text-align: center;
-  margin-top: -60px;
-  margin-right: 2em;
-}
-
-figure {
-  height: 50px;
-  width: 50px;
 }
 
 ul > li {
@@ -48,6 +113,15 @@ ul > li {
 }
 
 ul > li:hover {
+  color: #f8bbcd;
+}
+
+ul:last-child li a {
+  color: #6667ab;
+  text-decoration: none;
+}
+
+ul:last-child li a:hover {
   color: #f8bbcd;
 }
 
@@ -59,24 +133,38 @@ h2 {
   letter-spacing: 0.05em;
 }
 
-.fridge > figure {
+span {
+  color: #6667ab;
+  font-size: 200%;
+}
+
+.fridge .container {
   display: block;
-  margin-left: -60px;
-  margin-right: auto;
-  width: 50%;
-  z-index: -1;
+  max-width: 95%;
+  max-height: 650px;
+  border-radius: 100px;
+  border: 0.25rem solid transparent;
+  background-color: linen;
+  box-shadow: 0.5rem 0.5rem rgb(132 81 61 / 35%);
+  margin-top: 50px;
 }
 
 .ingredient {
   display: grid;
-  margin-top: 95px;
-  margin-left: 200px;
+  margin-top: 30px;
+  margin-left: 125px;
+  margin-bottom: 40px;
   max-width: 780px;
   grid-template-columns: 11em 11em 11em;
   grid-auto-rows: 150px;
-  grid-gap: 0px;
+  grid-gap: 50px;
   padding-bottom: 30px;
   justify-content: center;
+}
+@media (max-width: 796px) {
+  .ingredient {
+    margin-right: 60px;
+  }
 }
 
 input[type="checkbox"][id^="myCheckbox"] {
@@ -116,9 +204,18 @@ label img {
   transform-origin: 50% 50%;
 }
 
+
 :checked + label {
   border-color: #ddd;
-}
+  }
+  h3 {
+    text-align: center;
+    color: rgb(132 81 61 / 35%);
+    font-family: "Fredoka One", cursive;
+    font-size: 15px;
+    
+    justify-content: center;
+  }
 
 :checked + label:before {
   content: "✓";
@@ -137,15 +234,19 @@ label img {
   padding: 0 4px;
 }
 
-button {
+.button {
+  box-sizing: border-box;
+  font-family: "Fredoka One", cursive;
+  letter-spacing: 2px;
   appearance: none;
-  background-color: #f8bbcd;
-  border: none;
+  background-color: transparent;
   border-radius: 3em;
   color: #6667ab;
   cursor: pointer;
-  margin-top: 850px;
-  margin-left: -130px;
+  margin:auto;
+
+  margin-top: 50px;
+  width: auto;
   font-size: 1.1rem;
   line-height: 1;
   padding: 1.2em 2.8em;
@@ -153,23 +254,58 @@ button {
   text-align: center;
   text-transform: uppercase;
   font-weight: 700;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+  border: 2px solid #6667ab;
 }
 
-button:hover {
-  border: 3px solid pink;
-  background-color: white;
+.button:hover {
+  border: 3px solid transparent;
+  background-image: linear-gradient(
+    135deg,
+    rgb(254, 217, 205),
+    rgb(206, 206, 253)
+  );
 }
 
-footer > ul {
+footer ul {
   list-style: none;
-  display: flex;
   justify-content: center;
   text-align: center;
-  margin-top: 970px;
-  margin-left: -580px;
+  padding: 0;
+  margin:0 auto;
 }
 
 footer > ul > li {
-  padding: 30px;
-  display: inline-block;
+  padding: 40px;
+}
+
+footer ul li a {
+  color: #6667ab;
+  text-decoration: none;
+}
+
+footer ul li a:hover {
+  color: #f8bbcd;
+}
+
+@media only screen and (max-width: 796px) {
+  .fridge .container {
+    padding: 1.625rem 1.5rem 2rem;
+    max-height: 1080px;
+}
+  .ingredient {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 30px;
+    margin-left: 80px;
+  }
+  #container{
+    margin-top: 100px;
+  }
+  button {
+    text-align: center;
+    margin-left: 0px;
+    margin: 0 auto;
+    margin-top: 150px;
+  }
 }

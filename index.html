@@ -8,72 +8,118 @@
     <title>DORMABLE</title>
     <!-- PUT A DESCRIPTION IN HERE -->
     <meta name="description" content="describe content of the page here...." />
+
     <!-- LINK TO NORMALIZE (FOR CONSISTENCY) -->
-    <link rel="stylesheet" href="styles.normalize.css" />
+    <!--link rel="stylesheet" href="styles.normalize.css" /-->
     <!-- LINK TO ANY FRAMEWORK STYLES HERE-->
     <!-- LINK TO YOUR STYLES -->
     <link rel="stylesheet" href="styles/styles.css" />
+    <link rel="stylesheet" href="styles/warning.css" />
     <!-- LINK TO EXTERNAL JS LIBRARIES HERE -->
-    <!-- LINK TO YOUR JS HERE. NOTE THE DEFER ATTRIBUTE. -->
-    <script src="scripts/scripts.js" defer></script>
-    <script src="http://code.jquery.com/jquery-1.4.2.min.js"></script>
+    
+
+    
   </head>
+  
   <body>
     <header>
-      <h1>DORMABLE</h1>
+      <div class="container container-nav">
+        <div class="titles">
+          <h1><a href="index.html">DORMABLE</a></h1>
+      </div>
       <nav>
         <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="recipes.html">Recipes</a></li>
+          <li><a href="index.html">HOME</a></li>
+          <li><a href="about.html">ABOUT</a></li>
+          <li><a href="recipes.html">RECIPES</a></li>
         </ul>
       </nav>
+    </div>
     </header>
     <main>
-      <h2>Select 2 available ingredients!</h2>
+      <h2>Select <span>2</span> available ingredients <br>and create your recipe!</h2>
       <div class="fridge">
-        <figure>
-          <img src="images/fridge.png">
-        </figure>
-      </div>
-      <div class="ingredient">
-        <div class="ingredient">
-          <input type="checkbox" id="myCheckbox1" value="egg"/>
-          <label for="myCheckbox1"><img src="images/egg.png" /></label>
+        <div class="container">
+          <div class="ingredient">
+            <input type="checkbox" id="myCheckbox1" value="1" />
+            <label for="myCheckbox1"><img src="images/egg.png" />
+              <h3>Egg</h3>
+            </label>
   
-          <input type="checkbox" id="myCheckbox2" />
-          <label for="myCheckbox2"><img src="images/bread.png" /></label>
+            <input type="checkbox" id="myCheckbox2" value="3" />
+            <label for="myCheckbox2"><img src="images/bread.png" />
+              <h3>Bread</h3>
+            </label>
   
-          <input type="checkbox" id="myCheckbox3" />
-          <label for="myCheckbox3"><img src="images/veggie.png" /></label>
+            <input type="checkbox" id="myCheckbox3" value="10" />
+            <label for="myCheckbox3"><img src="images/fruits.png" />
+              <h3>Fruits</h3>
+            </label>
   
-          <input type="checkbox" id="myCheckbox4" />
-          <label for="myCheckbox4"><img src="images/ramen.png" /></label>
+            <input type="checkbox" id="myCheckbox4" value="30" />
+            <label for="myCheckbox4"><img src="images/ramen.png" />
+              <h3>Instant Ramen</h3>
+            </label>
   
-          <input type="checkbox" id="myCheckbox5" />
-          <label for="myCheckbox5"><img src="images/milk.png" /></label>
+            <input type="checkbox" id="myCheckbox5" value="50" />
+            <label for="myCheckbox5"><img src="images/milk.png" />
+              <h3>Milk</h3>
+            </label>
   
-          <input type="checkbox" id="myCheckbox6" />
-          <label for="myCheckbox6"><img src="images/meat.png" /></label>
+            <input type="checkbox" id="myCheckbox6" value="70" />
+            <label for="myCheckbox6"><img src="images/meat.png" />
+              <h3>Meatball</h3>
+            </label>
   
-          <input type="checkbox" id="myCheckbox7" />
-          <label for="myCheckbox7"><img src="images/cheese.png" /></label>
+            <input type="checkbox" id="myCheckbox7" value="100" />
+            <label for="myCheckbox7"><img src="images/cheese.png" />
+              <h3>Cheese</h3>
+            </label>
   
-          <input type="checkbox" id="myCheckbox8" />
-          <label for="myCheckbox8"><img src="images/chips.png" /></label>
+            <input type="checkbox" id="myCheckbox8" value="101" />
+            <label for="myCheckbox8"><img src="images/veggie.png" />
+              <h3>Frozen Veggie</h3>
+            </label>
   
-          <input type="checkbox" id="myCheckbox9" />
-          <label for="myCheckbox9"><img src="images/pizza.png" /></label>
-        </div>
-        <div id="container">
-          <button>CREATE RECIPE</button>
-        </div>
-        <footer>
-          <ul>
-            <li>PROPOSAL</li>
-            <li>WIREFRAME</li>
-            <li>UX REPORT</li>
-          </ul>
-    <!-- YOUR EXTERNAL PLUG-IN MAY ASK YOU TO PUT A SCRIPT TAG HERE. -->
+            <input type="checkbox" id="myCheckbox9" value="1000" />
+            <label for="myCheckbox9"><img src="images/pizza.png" />
+              <h3>Pizza</h3>
+            </label>
+          </div>
+          <div id="container">
+            <button class="button" id="submitbtn">CREATE RECIPE</button>
+          </div>
+          <footer>
+            <div class="footer-container">
+              <a class="footer-a" href="files/Dormable Proposal.pdf">PROPOSAL</a> &nbsp;&nbsp;
+              <a class="footer-a" href="files/wireframe.pdf">WIREFRAME</a> &nbsp;&nbsp;
+              <a class="footer-a" href="files/ux report.pdf">UX REPORT</a>
+            </div>
+          
+            </footer>
+            <div class="modal fade" id="detail_modal">
+              <div class="modal-dialog">
+               <div class="modal-content">
+                <div class="modal-header">
+                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title" id="plan_title">Recipe coming soon...</h4>
+                </div>
+                <div class="modal-body" id="plan_detail">
+                 Please choose other ingredients...
+                </div>
+                <div class="modal-footer">
+                 <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                 </div>
+               </div>
+              </div>
+             </div>
   </body>
-</html>
+  
+  </html>
+
+    <!-- LINK TO YOUR JS HERE. NOTE THE DEFER ATTRIBUTE. -->
+    <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="scripts/jquery-ui.js"></script>
+    <script src="scripts/bootstrap.min.js"></script>
+    <script src="scripts/scripts.js"></script>
+
