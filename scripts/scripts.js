@@ -66,7 +66,7 @@ $(function () {
         window.location.href = "pizzabreadpudding.html";
       }else if (page == 1070) {
         window.location.href = "pizzameatballs.html";
-      }else if (page == 19) {
+      }else if (page == 80) {
         window.location.href = "ramenmilk.html";
       }else if (page == 4) {
         window.location.href = "breadpizza.html";
@@ -87,8 +87,6 @@ $(function () {
        }else if (page == 151) {
         modal.modal();
        }else if (page == 71) {
-        modal.modal();
-       }else if (page == 80) {
         modal.modal();
        }else if (page == 110) {
         modal.modal();
