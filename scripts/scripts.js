@@ -72,14 +72,14 @@ $(function () {
         window.location.href = "breadpizza.html";
       }else if (page == 33) {
         window.location.href = "ramenbread.html";
-      }else if (page == 3) {
-        window.location.href = "pizzacroutons.html";
       }else if (page == 100) {
         window.location.href = "noodlemeatball.html";
       }else if (page == 101) {
         window.location.href = "scrambledegg.html";
       }else if (page == 131) {
         window.location.href = "veggieramen.html";
+      }else if (page == 51) {
+        window.location.href = "eggcustard.html";
       }else if (page == 40) {
        modal.modal();
       }else if (page == 120) {
