@@ -137,6 +137,8 @@ $(function () {
         modal.modal();
        }else if (page == 171) {
         modal.modal();
+       }else if (page == 1100) {
+        modal.modal();
        }
     });
 });
