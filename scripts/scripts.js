@@ -123,6 +123,20 @@ $(function () {
         modal.modal();
        }else if (page == 1050) {
         modal.modal();
+       }else if (page == 170) {
+        modal.modal();
+       }else if (page == 103) {
+        modal.modal();
+       }else if (page == 150) {
+        modal.modal();
+       }else if (page == 11) {
+        modal.modal();
+       }else if (page == 130) {
+        modal.modal();
+       }else if (page == 104) {
+        modal.modal();
+       }else if (page == 171) {
+        modal.modal();
        }
     });
 });
