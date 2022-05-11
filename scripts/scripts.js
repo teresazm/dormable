@@ -113,7 +113,9 @@ $(function () {
         modal.modal();
        }else if (page == 13) {
         modal.modal();
-       }else if (page == 170) {
+       }else if (page == 40) {
+        modal.modal();
+       }else if (page == 60) {
         modal.modal();
        }else if (page == 1010) {
         modal.modal();
