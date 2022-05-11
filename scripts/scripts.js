@@ -6,20 +6,24 @@ $(function () {
       $(":checkbox").removeAttr("disabled");
     }
   
-    var num = 0;
+    
     $(":checkbox").each(function () {
       $(this).click(function () {
-        if ($(this)[0].checked) {
-          ++num;
-          if (num == 2) {
+        var num = 0;
+        $(":checkbox").each(function () {
+        
+          if ($(this)[0].checked) {
+            ++num;
+          }
+        })
+        if (num >= 2) {
             //alert("最多选择 2项 的上限已满, 其他选项将会变为不可选.");
             $(":checkbox").each(function () {
               if (!$(this)[0].checked) {
                 $(this).attr("disabled", "disabled");
               }
             });
-          }
-        } else {
+          }else {
           --num;
           if (num <= 1) {
             $(":checkbox").each(function () {
@@ -109,62 +113,4 @@ $(function () {
        }
     });
 });
-
-
-
-/*
-  $("#submitbtn").click(function () {
-    page = 0;
-    $(":checkbox").each(function () {
-      if ($(this).attr("checked") == true) {
-        page = page + Number($(this).val());
-      }
-    });
-    var modal = $("#detail_modal");
-
-    if (page == 201) {
-      window.location.href = "veggiecheese.html";
-    }else if (page == 53) {
-      window.location.href = "frenchtoast.html";
-    }else if (page == 102) {
-      window.location.href = "omeletteinamug.html";
-    }else if (page == 13) {
-      window.location.href = "bananabreadpudding.html";
-    }else if (page == 131) {
-      window.location.href = "instantnoodles.html";
-    }else if (page == 1001) {
-      window.location.href = "pizzaegg.html";
-    }else if (page == 73) {
-      window.location.href = "meatballsandwich.html";
-    }else if (page == 1018) {
-      window.location.href = "eggtoastpizza.html";
-    }else if (page == 1101) {
-      window.location.href = "pizzacroutons.html";
-    }else if (page == 1003) {
-      window.location.href = "pizzabreadpudding.html";
-    }else if (page == 1070) {
-      window.location.href = "pizzameatballs.html";
-    }else if (page == 19) {
-      window.location.href = "ramenmilk.html";
-    }else if (page == 4) {
-      window.location.href = "breadpizza.html";
-    }else if (page == 33) {
-      window.location.href = "ramenbread.html";
-    }else if (page == 3) {
-      window.location.href = "pizzacroutons.html";
-    }else if (page == 100) {
-      window.location.href = "noodlemeatball.html";
-    }else if (page == 101) {
-      window.location.href = "scrambledegg.html";
-    }else if (page == 131) {
-      window.location.href = "veggieramen.html";
-    }else if (page == 40) {
-      //alert("ssss");
-     modal.modal();
-    }
-
-    
-  });
-*/
-
 
