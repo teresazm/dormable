@@ -16,7 +16,7 @@ $(function () {
             num++;
           }
         })
-        if (num == 2) {
+        if (num > 1) {
             //alert("最多选择 2项 的上限已满, 其他选项将会变为不可选.");
             $(":checkbox").each(function () {
               if (!$(this)[0].checked) {
