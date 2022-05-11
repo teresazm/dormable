@@ -13,10 +13,10 @@ $(function () {
         $(":checkbox").each(function () {
         
           if ($(this)[0].checked) {
-            ++num;
+            num++;
           }
         })
-        if (num >= 2) {
+        if (num == 2) {
             //alert("最多选择 2项 的上限已满, 其他选项将会变为不可选.");
             $(":checkbox").each(function () {
               if (!$(this)[0].checked) {
@@ -24,8 +24,8 @@ $(function () {
               }
             });
           }else {
-          --num;
-          if (num <= 1) {
+          
+          if (num < 2) {
             $(":checkbox").each(function () {
               if (!$(this)[0].checked) {
                 $(this).removeAttr("disabled");
