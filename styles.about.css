@@ -88,7 +88,7 @@ ul:last-child {
   justify-content: flex-end;
   text-align: center;
   font-family: "Fredoka One", cursive;
-  letter-spacing: 2px;
+  letter-spacing: 0.1em;
 }
 
 ul > li {

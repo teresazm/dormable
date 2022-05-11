@@ -106,6 +106,7 @@ ul:last-child {
   display: flex;
   justify-content: flex-end;
   text-align: center;
+  letter-spacing: 0.1em;
 }
 
 ul > li {
